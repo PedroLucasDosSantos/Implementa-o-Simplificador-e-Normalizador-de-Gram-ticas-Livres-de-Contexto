@@ -1,0 +1,17 @@
+gramatica = Gramatica()
+gramatica.adicionar_regra('S', ['aAa', 'bBv'])
+gramatica.adicionar_regra('A', ['a', 'aA'])
+
+print("Gramática original:")
+print(gramatica)
+
+remover_inuteis_e_inalcancaveis(gramatica)
+remover_producoes_vazias(gramatica)
+substituir_producoes_unitarias(gramatica)
+
+print("Gramática simplificada:")
+print(gramatica)
+
+forma_normal_chomsky(gramatica)
+
+print("Forma Normal de Chom
